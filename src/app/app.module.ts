@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
-import { ListaComponent } from './components/lista/lista.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PresenteComponent } from './components/presente/presente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    PresenteComponent
   ],
   imports: [
     BrowserModule,
