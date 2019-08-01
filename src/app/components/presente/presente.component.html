@@ -1,11 +1,8 @@
-<div class="jumbotron">
-    <button type="button" class="btn btn-primary" (click)="sistemaON()">Sistema ON</button>
+<div class="bg-transparent">
     <h1 class="text-center">Escolha o seu presente</h1>
-
     <br />
-
     <div class="row">
-        <div *ngFor="let presente of DB.lista; let i = index" class="item-center">
+        <div *ngFor="let presente of listaDePresentes; let i = index" class="item-center">
             <div class="col-4">
                 <div class="card text-center card-item text-white bg-dark mb-3">
                     <img class="card-img-top" src='{{presente.localImagem}}' style="height: 16rem;">

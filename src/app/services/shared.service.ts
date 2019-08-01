@@ -5,10 +5,12 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ContatoService {
+export class SharedService {
   apiUrl = environment.apiUrl;
-  localPrefixo: string = '../../assets/images/';
 
   constructor(public http: HttpClient) { }
-  
+
+  isServiceOnline(){
+    return this.http.get(this.apiUrl);
+  }
 }

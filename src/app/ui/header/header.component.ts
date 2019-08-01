@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sharedService: SharedService) { }
 
   ngOnInit() {
   }
 
+  isServiceOnline(){
+    this.sharedService
+      .isServiceOnline()
+      .subscribe(res => {
+        console.info('Serviço on');
+        console.info(res);
+      }, err =>{
+        console.error('Serviço off');
+        console.error(err);
+      });
+  }
 }

@@ -1,15 +1,27 @@
 import { Injectable } from '@angular/core';
-import { ListaModel } from '../model/interfaces/lista-model';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { PresenteModel } from 'src/app/model/presente-model';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListaService {
+export class PresenteService {
   localPrefixo: string = '../assets/images/';
-  
-  constructor() { }
+  apiUrl = environment.apiUrl;
 
-  getListaDePresentes(): any{
+  constructor(public http: HttpClient) { }
+
+  listarTodosPresentes(){
+    return Observable.create(ob =>{
+      ob.next(this.mockPresentes());
+      ob.complete();
+    });
+    //return this.http.get<PresenteModel[]>(`${this.apiUrl}/listarTodosPresentes`);
+  }
+
+  mockPresentes(): any{
     return {
       lista: [
         {
