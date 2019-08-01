@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <h1 class="text-center">Escolha o seu presente</h1>
+
+    <br />
+    <div class="row">
+        <div *ngFor="let presente of DB.lista; let i = index" class="item-center">
+            <div class="col-4">
+                <div class="card text-center card-item text-white bg-dark mb-3">
+                    <img class="card-img-top" src='{{presente.localImagem}}' style="height: 16rem;">
+                    <div class="card-body">
+                        <div class="card-header font-weight-bold font-size-20">{{ presente.nome }}</div>
+                        <div class="card-text"> {{ presente.descricao }} </div>
+                        <div class="card-text margin-top-1em font-weight-bold font-size-20" style="color: yellow;">
+                            R$ {{ presente.valor }} </div>
+
+                        <button type="button" class="btn btn-primary item-center margin-top-1em">Presentear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
