@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://gifts-service-api-com.umbler.net/'
+  apiUrl: 'https://gifts-service-api.com/'
 };
