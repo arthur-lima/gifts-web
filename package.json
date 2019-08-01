@@ -1,5 +1,5 @@
 {
-  "name": "gifts",
+  "name": "gifts-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -45,5 +45,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthur-lima/gifts-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arthur-lima/gifts-web/issues"
+  },
+  "homepage": "https://github.com/arthur-lima/gifts-web#readme"
 }
