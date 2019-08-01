@@ -7,7 +7,6 @@ import { environment } from 'src/environments/environment';
 })
 export class ContatoService {
   apiUrl = environment.apiUrl;
-  localPrefixo: string = '../../assets/images/';
 
   constructor(public http: HttpClient) { }
   

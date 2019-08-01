@@ -5,7 +5,7 @@ export class PresenteModel {
     public nome: string;
     public descricao: string;
     public valor: CurrencyPipe;
-    public localPathImagem?: string;
+    public nomeImagem?: string;
 
     constructor(){}
 }

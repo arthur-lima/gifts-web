@@ -5,7 +5,7 @@
         <div *ngFor="let presente of listaDePresentes; let i = index" class="item-center">
             <div class="col-4">
                 <div class="card text-center card-item text-white bg-dark mb-3">
-                    <img class="card-img-top" src='{{presente.localImagem}}' style="height: 16rem;">
+                    <img class="card-img-top" src='../assets/images/{{presente.nomeImagem}}' style="height: 16rem;">
                     <div class="card-body">
                         <div class="card-header font-weight-bold font-size-20">{{ presente.nome }}</div>
                         <div class="card-text"> {{ presente.descricao }} </div>

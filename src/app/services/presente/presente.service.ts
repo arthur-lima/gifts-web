@@ -8,7 +8,6 @@ import { Observable } from 'rxjs/Observable';
   providedIn: 'root'
 })
 export class PresenteService {
-  localPrefixo: string = '../assets/images/';
   apiUrl = environment.apiUrl;
 
   constructor(public http: HttpClient) { }
@@ -29,42 +28,42 @@ export class PresenteService {
           nome: 'Liquidificador',
           descricao: 'Texto explicativo a respeito do item',
           valor: '100,00',
-          localImagem: this.localPrefixo + 'liquidificador.png'
+          nomeImagem: 'liquidificador.png'
         },
         {
           id: 2,
           nome: 'Batedeira',
           descricao: 'Texto explicativo a respeito do item',
           valor: '150,00',
-          localImagem: this.localPrefixo + 'batedeira.jpg'
+          nomeImagem: 'batedeira.jpg'
         },
         {
           id: 3,
           nome: 'Faqueiro',
           descricao: 'Texto explicativo a respeito do item',
           valor: '50,00',
-          localImagem: this.localPrefixo + 'faqueiro.jpg'
+          nomeImagem: 'faqueiro.jpg'
         },
         {
           id: 4,
           nome: 'Liquidificador',
           descricao: 'Texto explicativo a respeito do item',
           valor: '100,00',
-          localImagem: this.localPrefixo + 'liquidificador.png'
+          nomeImagem: 'liquidificador.png'
         },
         {
           id: 5,
           nome: 'Liquidificador',
           descricao: 'Texto explicativo a respeito do item',
           valor: '100,00',
-          localImagem: this.localPrefixo + 'liquidificador.png'
+          nomeImagem: 'liquidificador.png'
         },
         {
           id: 6,
           nome: 'Liquidificador',
           descricao: 'Texto explicativo a respeito do item',
           valor: '100,00',
-          localImagem: this.localPrefixo + 'liquidificador.png'
+          nomeImagem: 'liquidificador.png'
         }
       ]
     }
