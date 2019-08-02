@@ -8,19 +8,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { PresenteComponent } from './components/presente/presente.component';
 import { ModalContatoComponent } from './components/modal-contato/modal-contato.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MascaraTelefoneDirective } from './directives/mascara-telefone.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresenteComponent,
-    ModalContatoComponent
+    ModalContatoComponent,
+    MascaraTelefoneDirective
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     UiModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
