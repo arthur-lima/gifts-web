@@ -6,19 +6,24 @@ import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PresenteComponent } from './components/presente/presente.component';
+import { ModalContatoComponent } from './components/modal-contato/modal-contato.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PresenteComponent
+    PresenteComponent,
+    ModalContatoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UiModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalContatoComponent]
 })
 export class AppModule { }

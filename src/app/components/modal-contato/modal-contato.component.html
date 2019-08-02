@@ -1,0 +1,56 @@
+<div class="modal-header">
+    <h4 class="modal-title">Por favor, preencha os dados...</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Endereço de email</label>
+                <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control" id="telefone" placeholder="Seu telefone" required>
+                    </div>
+                    <div class="col">
+                        <label for="presente">Presente escolhido</label>
+                        <input type="text" class="form-control" id="presente" value="Geladeira - R$ 100,00" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <small id="mensagemHelp" class="form-text text-muted">Deixa um conselho pra gente. 😀</small>
+                <textarea type="email" class="form-control" id="mensagem" placeholder="Sua mensagem"
+                    aria-describedby="mensagemHelp" rows="3"></textarea>
+            </div>
+
+            <hr>
+
+            <div class="form-group float-right">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" 
+                            (click)="activeModal.close('Close click')">Solicitar</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger"
+                            (click)="activeModal.close('Close click')">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
