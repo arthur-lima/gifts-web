@@ -7,6 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { formatCurrency } from '@angular/common';
 import { ModalMessagesComponent } from '../modal-messages/modal-messages.component';
 import { ModalMensagensModel } from 'src/app/models/modal-mensagens-model';
+import { Utils } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-modal-contato',
@@ -66,9 +67,8 @@ export class ModalContatoComponent implements OnInit {
       .buscarContatoPorEmail(this.cadastroFormulario.get('email').value)
       .subscribe(res => {
         res.presentes.push(this.presenteEscolhido);
-
-        //TODO: implementar no back end
-        //this.atualizarContato(res);
+        res.mensagem = Utils.evitarObjetoInvalido(res.mensagem, this.cadastroFormulario.get('mensagem').value);
+        this.atualizarContato(res);
       }, err => {
         this.cadastrarContato();
       });
@@ -79,8 +79,9 @@ export class ModalContatoComponent implements OnInit {
       .atualizar(contato)
       .subscribe(res => {
         this.finalizarComMensagem(new ModalMensagensModel(
-          'Mais um presente né?!',
-          'Então, segue igualzinho da outra vez, dentro de poucas horas vamos enviar para seu e-mail um boleto com o valor do presente que escolheu.',
+          'Mais um presente?! 😮',
+          'Então, é igualzinho como da última vez, dentro de poucas horas vamos enviar para seu e-mail um boleto com o valor do presente que você escolheu.' +
+          '\n😘\nVocê é demais.',
           'SUCCESS'
         ));
       }, err => {
@@ -93,8 +94,9 @@ export class ModalContatoComponent implements OnInit {
       .cadastrar(this.construirContato(this.cadastroFormulario.value))
       .subscribe(res => {
         this.finalizarComMensagem(new ModalMensagensModel(
-          'Quase lá!',
-          'Dentro de poucas horas vamos enviar para seu e-mail um boleto com o valor do presente que escolheu.',
+          'Quase lá! 😍',
+          'Dentro de poucas horas vamos enviar para seu e-mail um boleto com o valor do presente que escolheu.' +
+          '\n😘\nObrigado pelo carinho.',
           'SUCCESS'
         ));
       }, err => {
@@ -107,20 +109,21 @@ export class ModalContatoComponent implements OnInit {
     contato.nome = objeto.nome;
     contato.email = objeto.email;
     contato.telefone = objeto.telefone;
+    contato.mensagem = objeto.mensagem;
     contato.presentes = [this.presenteEscolhido];
     return contato;
   }
 
-  finalizarComMensagem(proximaModal: ModalMensagensModel){
+  finalizarComMensagem(proximaModal: ModalMensagensModel) {
     this.activeModal.close('Close click');
     let modal = this.modalService.open(ModalMessagesComponent);
     modal.componentInstance.modal = proximaModal;
   }
 
-  gerarMensagemErroGenerica(err){
+  gerarMensagemErroGenerica(err) {
     this.finalizarComMensagem(new ModalMensagensModel(
-      'Ops... tivemos um problema',
-      'Erro: ' + err.error.mensagem,
+      'Ops... tivemos um problema 😖',
+      'Erro: ' + Utils.evitarObjetoInvalido(err.error, err.error.mensagem),
       'ERROR'
     ));
   }

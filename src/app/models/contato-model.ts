@@ -1,7 +1,7 @@
 import { PresenteModel } from './presente-model';
 
 export class ContatoModel {
-    id: number;
+    _id: number;
     nome: string;
     email: string;
     telefone: string;
