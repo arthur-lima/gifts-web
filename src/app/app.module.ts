@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,13 +10,19 @@ import { ModalContatoComponent } from './components/modal-contato/modal-contato.
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MascaraTelefoneDirective } from './directives/mascara-telefone.directive';
+import {registerLocaleData} from '@angular/common';
+import br from '@angular/common/locales/br';
+import { ModalMessagesComponent } from './components/modal-messages/modal-messages.component';
+
+registerLocaleData(br, 'pt');
 
 @NgModule({
   declarations: [
     AppComponent,
     PresenteComponent,
     ModalContatoComponent,
-    MascaraTelefoneDirective
+    MascaraTelefoneDirective,
+    ModalMessagesComponent
   ],
   imports: [
     FormsModule,
@@ -29,6 +35,6 @@ import { MascaraTelefoneDirective } from './directives/mascara-telefone.directiv
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ModalContatoComponent]
+  entryComponents: [ModalContatoComponent, ModalMessagesComponent]
 })
 export class AppModule { }

@@ -10,7 +10,7 @@
                         <div class="card-header font-weight-bold font-size-20">{{ presente.nome }}</div>
                         <div class="card-text"> {{ presente.descricao }} </div>
                         <div class="card-text margin-top-1em font-weight-bold font-size-20" style="color: yellow;">
-                            R$ {{ presente.valor }} </div>
+                           R$ {{presente.valor | currency:' ':'symbol':'1.2-2':'pt'}} </div>
 
                         <button type="button" class="btn btn-primary item-center margin-top-1em" (click)="abrirModalCadastro(presente)" >Presentear</button>
                     </div>

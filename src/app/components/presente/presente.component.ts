@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PresenteService } from 'src/app/services/presente/presente.service';
-import { PresenteModel } from 'src/app/model/presente-model';
+import { PresenteModel } from 'src/app/models/presente-model';
 import { NgbModal, ModalDismissReasons, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ModalContatoComponent } from '../modal-contato/modal-contato.component';
 

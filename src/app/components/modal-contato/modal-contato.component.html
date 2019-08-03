@@ -1,18 +1,4 @@
-<div *ngIf="cadastroFinalizado; then tplMensagemSucesso else tplCadastro"></div>
-
-<ng-template #tplMensagemSucesso>
-    <div class="alert alert-success text-center position-fixed" role="alert">
-        <h1 class="alert-heading">Estamos quase lá!</h1>
-        <hr>
-        <p class="mb-0">
-            Dentro de poucas horas vamos enviar para seu e-mail um boleto com o valor do presente que escolheu. <br />
-            <i class="fa fa-heart"></i> <br />
-            Agradecemos pelo seu carinho.
-        </p>
-    </div>
-</ng-template>
-
-<ng-template #tplCadastro>
+<div class="container">
     <div class="modal-header">
         <h4 class="modal-title text-center">Contato</h4>
         <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
@@ -23,28 +9,27 @@
         <form [formGroup]="cadastroFormulario" novalidate>
             <div class="form-group">
                 <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" placeholder="Seu nome" formControlName="nome" required>
-                    <div *ngIf="isInvalid('nome')" class="alert alert-danger"></div>
+                    <label for="nome">Nome completo</label>
+                    <input [ngClass]="{'alert-danger': isInvalid('nome') }" type="text" class="form-control"
+                        placeholder="Seu nome" formControlName="nome" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Endereço de email</label>
-                    <input type="email" class="form-control" placeholder="Seu email" formControlName="email" required>
-                    <div *ngIf="isInvalid('email')" class="alert alert-danger"></div>
+                    <input [ngClass]="{'alert-danger': isInvalid('email') }" type="email" class="form-control"
+                        placeholder="Seu email" formControlName="email" required>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col">
                             <label for="telefone">Telefone</label>
-                            <input type="tel" class="form-control" placeholder="Seu telefone" appMascaraTelefone
-                                formControlName="telefone" required>
-                            <div *ngIf="isInvalid('telefone')" class="alert alert-danger"></div>
+                            <input [ngClass]="{'alert-danger': isInvalid('telefone') }" type="tel" class="form-control"
+                                placeholder="Seu telefone" appMascaraTelefone formControlName="telefone" required>
                         </div>
                         <div class="col">
                             <label for="presente">Presente escolhido</label>
-                            <input type="text" class="form-control" name="presente"
+                            <input type="text" class="form-control h6" name="presente"
                                 formControlName="resumoDescricaoPresente">
                         </div>
                     </div>
@@ -74,4 +59,4 @@
             </div>
         </form>
     </div>
-</ng-template>
+</div>

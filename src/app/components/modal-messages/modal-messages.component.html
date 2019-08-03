@@ -1,0 +1,7 @@
+<div [ngClass]="{'alert-danger': modal.tipo == 'ERROR' }" class="alert alert-success text-center position-fixed" role="alert">
+    <h1 class="alert-heading">{{modal.titulo}}</h1>
+    <hr>
+    <p class="mb-0">
+        {{modal.mensagem}}
+    </p>
+</div>

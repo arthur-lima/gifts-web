@@ -6,7 +6,7 @@ export class ContatoModel {
     email: string;
     telefone: string;
     mensagem: string;
-    presenteEscolhido: PresenteModel;
+    presentes: [PresenteModel];
 
     constructor(){}
 }
