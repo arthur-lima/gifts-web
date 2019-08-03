@@ -85,7 +85,7 @@ export class ModalContatoComponent implements OnInit {
         ));
       }, err => {
         this.gerarMensagemErroGenerica(err);
-      })
+      });
   }
 
   cadastrarContato() {
@@ -99,7 +99,7 @@ export class ModalContatoComponent implements OnInit {
         ));
       }, err => {
         this.gerarMensagemErroGenerica(err);
-      })
+      });
   }
 
   construirContato(objeto: any) {
