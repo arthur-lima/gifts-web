@@ -28,7 +28,7 @@ export class PresenteComponent implements OnInit {
     this.presenteService
       .listarTodosPresentes()
       .subscribe(res => {
-        this.listaDePresentes = res.lista;
+        this.listaDePresentes = res;
       }, err => {
         console.log(err);
       });
