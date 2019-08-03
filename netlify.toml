@@ -1,0 +1,10 @@
+
+[build]
+  command = "ng build --prod"
+  publish = "dist/gifts-web"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
