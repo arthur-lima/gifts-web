@@ -49,10 +49,6 @@ export class ModalContatoComponent implements OnInit {
       'telefone': new FormControl('', [
         Validators.required
       ]),
-      'resumoDescricaoPresente': new FormControl({
-        value: this.resumoDescricaoPresente,
-        disabled: true
-      }),
       'mensagem': new FormControl('')
     });
   }
