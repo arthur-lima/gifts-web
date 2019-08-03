@@ -1,10 +1,10 @@
 
 [build]
-  command = "npm run build && npm run copy-redirects"
+  command = "ng build --prod"
   publish = "dist/gifts-web"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/"
   status = 200
   force = true
