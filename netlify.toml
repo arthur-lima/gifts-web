@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "/"
+  to = "https://casamento-arthur-dani.netlify.com/"
   status = 200
   force = true
