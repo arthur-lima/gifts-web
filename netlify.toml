@@ -1,6 +1,6 @@
 
 [build]
-  command = "ng build --prod"
+  command = "npm run build && npm run copy-redirects"
   publish = "dist/gifts-web"
 
 [[redirects]]
