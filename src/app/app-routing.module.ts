@@ -4,8 +4,8 @@ import { PresenteComponent } from './components/presente/presente.component';
 
 
 const routes: Routes = [
-  { path: 'presentes', component: PresenteComponent},
-  { path: '', redirectTo: '/presentes', pathMatch: 'full' }
+  { path: '', redirectTo: '/presentes', pathMatch: 'full' },
+  { path: 'presentes', component: PresenteComponent}
 ];
 
 @NgModule({
