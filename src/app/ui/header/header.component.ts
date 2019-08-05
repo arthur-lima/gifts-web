@@ -7,10 +7,14 @@ import { SharedService } from 'src/app/services/shared.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  navbarOpen = false;
   constructor(public sharedService: SharedService) { }
 
   ngOnInit() {
+  }
+  
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 
   isServiceOnline(){

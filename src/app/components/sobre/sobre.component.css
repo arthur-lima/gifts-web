@@ -1,8 +1,7 @@
-h4{
+.carousel-image{
+    width: 100%; 
+}
+.text-shadow{
     color: white; 
     text-shadow: black 0.1em 0.1em 0.2em
-}
-
-.ml-75rem {
-    margin-left: .75rem;
 }

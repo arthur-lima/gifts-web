@@ -13,6 +13,7 @@ import { MascaraTelefoneDirective } from './directives/mascara-telefone.directiv
 import {registerLocaleData} from '@angular/common';
 import br from '@angular/common/locales/br';
 import { ModalMessagesComponent } from './components/modal-messages/modal-messages.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 registerLocaleData(br, 'pt');
 
@@ -22,7 +23,8 @@ registerLocaleData(br, 'pt');
     PresenteComponent,
     ModalContatoComponent,
     MascaraTelefoneDirective,
-    ModalMessagesComponent
+    ModalMessagesComponent,
+    SobreComponent
   ],
   imports: [
     FormsModule,
